@@ -9,13 +9,13 @@ const accountRoute = require('./components/account/accountRouter.js')
 dotenv.config();
 
 const corsOptions = {
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3002", "https://blockguard-76fb4c03cbe0.herokuapp.com"],
     credentials: true,
     optionSuccessstatus: 200
 }
 
 const app = Express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3001;
 const MONGODB_URL = process.env.MONGODB_URI;
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
